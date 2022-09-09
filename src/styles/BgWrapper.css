@@ -1,9 +1,9 @@
 .bg-wrapper {
   width: 30%;
   height: 50%;
-  background-color: #5CDB95;
+  background-color: white;
   border-radius: 2rem;
-  box-shadow: 10px 10px 8px #379683;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
 }
 .bg-wrapper .control-panel {
   box-sizing: border-box;
@@ -11,35 +11,30 @@
   width: 100%;
   height: 15%;
   padding: 0.5rem;
-  background-color: #5CDB95;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   border-radius: 2rem 2rem 0 0;
 }
-.bg-wrapper .control-panel input {
+.bg-wrapper .control-panel .input-area {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  border-radius: 2rem;
+  border: 1px solid black;
+}
+.bg-wrapper .control-panel .input-area input {
   box-sizing: border-box;
-  width: 60%;
-  height: 2rem;
-  border-radius: 2rem;
+  width: 80%;
+  height: 3rem;
+  margin-left: 20px;
+  font-size: 2rem;
   border: none;
-  padding-left: 10px;
 }
-.bg-wrapper .control-panel input:hover {
-  border: 2px solid #379683;
-}
-.bg-wrapper .control-panel button {
-  width: 30%;
-  height: 2rem;
-  border-radius: 2rem;
-  border: none;
-  background-color: #05386B;
-  color: #EDF5E1;
-}
-.bg-wrapper .control-panel button:hover {
-  transform: scale(1.1);
-  box-shadow: 2px 2px 1px #379683;
+.bg-wrapper .control-panel .input-area input:focus {
+  outline: none;
 }
 .bg-wrapper .divider {
   width: 100%;

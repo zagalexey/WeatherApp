@@ -1,0 +1,62 @@
+.weather-app {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0 0 2rem 2rem;
+}
+.weather-app__date, .weather-app__clock, .weather-app__city, .weather-app__temp, .weather-app__condition {
+  color: black;
+}
+.weather-app__icon {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-app__icon img {
+  width: 100%;
+  height: 100%;
+}
+.weather-app__loctitle {
+  font-size: 0.8rem;
+}
+.weather-app__temp {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3.5rem;
+}
+.weather-app__condition {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  background-color: #d3d3d3;
+  padding: 5px 10px;
+  border-radius: 1rem;
+}
+.weather-app__additional {
+  width: 100%;
+  height: 100px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.weather-app__additional i {
+  font-size: 1.5rem;
+}
+.weather-app__additional__col {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.weather-app__additional__col span {
+  font-size: 1.1rem;
+}
+
+/*# sourceMappingURL=WeatherApp.css.map */

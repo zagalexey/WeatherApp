@@ -1,45 +1,55 @@
 import React from 'react';
 
-import '../styles/WatchApp.css'
+import '../styles/WeatherApp.css'
 
-interface WatchAppProps {
+interface weatherAppProps {
     city: string,
+    country: string,
     tempC: number,
+    cloud: number,
+    wind: number,
+    humidity: number,
     condition: string,
-    totalTime: string,
     iconNumber: string | undefined
 }
 
-const WeatherApp = ({city, tempC, condition, totalTime, iconNumber}: WatchAppProps) => {
+const WeatherApp = ({city, tempC, condition, iconNumber, country, cloud, humidity, wind}: weatherAppProps) => {
 
     const tmpC = `${tempC} ℃`
-    const insertedTime = totalTime.split(' ')
-    const localTimeDays = insertedTime[0]
-    const localTimeHours = insertedTime[1]
-    // let icon: string
+    const location = `${city}, ${country}`
     let iconUrl: any
-
-    // console.log(iconNumber)
     let test = iconNumber?.split('/')
 
     if (test !== undefined) {
-        // icon = test[test.length - 1]
-        // console.log(typeof test[test.length - 1])
         iconUrl = require(`../icons/day/${test[test.length - 1]}`)
     }
 
     return (
-        <div className={'watch-app'}>
-            <p className={'watch-app__date'}>{localTimeDays}</p>
-            <p className={'watch-app__clock'}>{localTimeHours}</p>
-            <p className={'watch-app__city'}>{city}</p>
+        <div className={'weather-app'}>
+            <p className={'weather-app__loctitle'}><i className="fa-solid fa-location-crosshairs"></i>Your Location Now
+            </p>
+            <p className={'weather-app__location'}>{location}</p>
             {iconNumber === undefined ? <span>No Icon yet</span> :
-                <span className={'watch-app__icon'}>
+                <span className={'weather-app__icon'}>
                 <img src={iconUrl}
                      alt={'weather-icon'}/>
             </span>}
-            <p className={'watch-app__temp'}>{tmpC}</p>
-            <p className={'watch-app__condition'}>{condition}</p>
+            <p className={'weather-app__condition'}>{condition}</p>
+            <p className={'weather-app__temp'}>{tmpC}</p>
+            <div className={'weather-app__additional'}>
+                <div className={'weather-app__additional__col'}>
+                    <i className="fa-solid fa-wind"></i>
+                    <span>{wind + 'km/h'}</span>
+                </div>
+                <div className={'weather-app__additional__col'}>
+                    <i className="fa-solid fa-droplet"></i>
+                    <span>{humidity + '%'}</span>
+                </div>
+                <div className={'weather-app__additional__col'}>
+                    <i className="fa-solid fa-cloud"></i>
+                    <span>{cloud + '%'}</span>
+                </div>
+            </div>
         </div>
     );
 };

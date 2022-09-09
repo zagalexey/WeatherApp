@@ -3,9 +3,9 @@
 .bg-wrapper {
   width: 30%;
   height: 50%;
-  background-color: $green;
+  background-color: white;
   border-radius: 2rem;
-  box-shadow: 10px 10px 8px #379683;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
 
   .control-panel {
     box-sizing: border-box;
@@ -13,37 +13,31 @@
     width: 100%;
     height: 15%;
     padding: 0.5rem;
-    background-color: $green;
+    background-color: $white;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     border-radius: 2rem 2rem 0 0;
 
-    input {
-      box-sizing: border-box;
-      width: 60%;
-      height: 2rem;
+    .input-area {
+      display: flex;
+      align-items: center;
+      width: 90%;
       border-radius: 2rem;
-      border: none;
-      padding-left: 10px;
+      border: 1px solid black;
 
-      &:hover {
-        border: 2px solid $green_dark;
-      }
-    }
+      input {
+        box-sizing: border-box;
+        width: 80%;
+        height: 3rem;
+        margin-left: 20px;
+        font-size: 2rem;
+        border: none;
 
-    button {
-      width: 30%;
-      height: 2rem;
-      border-radius: 2rem;
-      border: none;
-      background-color: $blue;
-      color: $light;
-
-      &:hover {
-        transform: scale(1.1);
-        box-shadow: 2px 2px 1px $green_dark;
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
@@ -53,33 +47,34 @@
     height: 2px;
     background-color: $light;
   }
+
 }
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1500px) {
   .bg-wrapper {
     width: 40%;
   }
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1100px) {
   .bg-wrapper {
     width: 40%;
   }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   .bg-wrapper {
     width: 40%;
   }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 750px) {
   .bg-wrapper {
     width: 50%;
   }
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 650px) {
   .bg-wrapper {
     width: 70%;
   }

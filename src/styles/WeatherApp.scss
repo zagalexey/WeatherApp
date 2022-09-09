@@ -1,0 +1,73 @@
+@import "../styles/variables";
+
+.weather-app {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0 0 2rem 2rem;
+
+  &__date, &__clock, &__city, &__temp, &__condition {
+    color: black;
+  }
+
+  &__icon {
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__loctitle {
+    font-size: .8rem;
+  }
+
+  &__temp {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.5rem;
+  }
+
+  &__condition {
+    margin-top: .5rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #d3d3d3;
+    padding: 5px 10px;
+    border-radius: 1rem;
+  }
+
+  &__additional {
+    width: 100%;
+    height: 100px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    &__col {
+      height: 100%;
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
